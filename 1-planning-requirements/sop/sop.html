@@ -1,0 +1,420 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>SOP-PMR-001 Planning & Requirements</title><style>
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 850px; margin: 30px auto; padding: 20px; font-size: 13px; line-height: 1.6; color: #222; }
+h1 { font-size: 22px; border-bottom: 2px solid #333; padding-bottom: 8px; margin-top: 30px; }
+h2 { font-size: 18px; margin-top: 24px; color: #1a1a1a; }
+h3 { font-size: 15px; margin-top: 20px; color: #333; }
+h4 { font-size: 14px; margin-top: 16px; color: #444; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 12px; }
+th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+li { margin: 3px 0; list-style-type: none; }
+li::before { content: "• "; color: #666; }
+code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 12px; }
+strong { font-weight: 600; }
+p { margin: 6px 0; }
+@media print { body { margin: 0; padding: 15px; } }
+</style></head><body><h1>Planning & Requirements</h1>
+
+<h2>Standard Operating Procedure</h2>
+
+<hr>
+
+<h3>Header</h3>
+
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td><strong>Document ID</strong></td><td>SOP-PMR-001-v1.0.0</td></tr>
+<tr><td><strong>Version</strong></td><td>1.0.0</td></tr>
+<tr><td><strong>Effective Date</strong></td><td>2026-03-02</td></tr>
+<tr><td><strong>Review Date</strong></td><td>2027-03-02</td></tr>
+<tr><td><strong>Department</strong></td><td>Project Management</td></tr>
+<tr><td><strong>Process Stage</strong></td><td>1. Planning & Requirements</td></tr>
+<tr><td><strong>Approved By</strong></td><td>[Pending]</td></tr>
+</table>
+
+<hr>
+
+<h3>1. Objective</h3>
+
+<p>This procedure establishes the standard process for initiating and planning a new project after contract signing. It covers stakeholder alignment, scope definition, detailed requirements gathering, user story creation, SRS development, technical feasibility assessment, risk management, resource planning, and formal approval — ensuring the project has a solid, validated foundation before entering the Design phase.</p>
+
+<hr>
+
+<h3>2. Scope</h3>
+
+<p><strong>In Scope</strong>:</p>
+<li style="margin-left:0px">Kick-off meeting planning and execution</li>
+<li style="margin-left:0px">Stakeholder identification and alignment</li>
+<li style="margin-left:0px">Detailed requirements elicitation, documentation, and categorization (functional, non-functional, constraints)</li>
+<li style="margin-left:0px">User story creation with acceptance criteria and product backlog management</li>
+<li style="margin-left:0px">User flow creation</li>
+<li style="margin-left:0px">System Requirements Specification (SRS) development</li>
+<li style="margin-left:0px">Technical feasibility assessment</li>
+<li style="margin-left:0px">SMART project objectives and success criteria definition</li>
+<li style="margin-left:0px">Timeline, milestone, and delivery plan proposal</li>
+<li style="margin-left:0px">Risk identification, assessment, and mitigation planning</li>
+<li style="margin-left:0px">Budget estimation and resource allocation</li>
+<li style="margin-left:0px">Requirements baseline establishment</li>
+<li style="margin-left:0px">Client requirements sign-off and internal planning approval</li>
+
+<p><strong>Out of Scope</strong>:</p>
+<li style="margin-left:0px">Technical architecture decisions (covered in Design phase)</li>
+<li style="margin-left:0px">Contract negotiation (completed in Pre-sales)</li>
+<li style="margin-left:0px">Detailed task scheduling (created during Development phase)</li>
+<li style="margin-left:0px">Ongoing risk monitoring (covered in project execution)</li>
+
+<p><strong>Applies To</strong>:</p>
+<li style="margin-left:0px">All new client projects after contract signing</li>
+<li style="margin-left:0px">Major change requests requiring re-planning</li>
+<li style="margin-left:0px">Projects transitioning from discovery/pre-sales to execution phase</li>
+
+<hr>
+
+<h3>3. Prerequisites/Safety</h3>
+
+<p>The following must be in place before this process begins:</p>
+
+<table>
+<tr><th>Prerequisite</th><th>Source</th><th>Verification</th></tr>
+<tr><td>Signed Contract</td><td>Pre-sales / Account Manager</td><td>TMPL-CONTRACT-001 in project folder</td></tr>
+<tr><td>Project Charter</td><td>Pre-sales</td><td>TMPL-CHARTER-001 approved</td></tr>
+<tr><td>Project Handoff Complete</td><td>SOP-PM-002 (Project Handoff)</td><td>Handoff checklist signed</td></tr>
+<tr><td>Client Contacts Identified</td><td>Account Manager</td><td>Contact list in CRM</td></tr>
+<tr><td>Technical Constraints (if known)</td><td>Pre-sales / Technical Lead</td><td>Documented in handoff</td></tr>
+</table>
+
+<hr>
+
+<h3>4. Responsibilities (RACI)</h3>
+
+<table>
+<tr><th>Activity</th><th>Responsible</th><th>Accountable</th><th>Consulted</th><th>Informed</th></tr>
+<tr><td>Schedule & Conduct Kick-off</td><td>PM</td><td>PM</td><td>AM, Client</td><td>Dev Team, QA</td></tr>
+<tr><td>Gather Requirements</td><td>PM, BA</td><td>PM</td><td>Client, Designer, CEO</td><td>Dev, QA, All stakeholders</td></tr>
+<tr><td>User Stories & SRS Development</td><td>PM, BA</td><td>PM</td><td>Dev, Designer, QA, Tech Lead</td><td>All stakeholders</td></tr>
+<tr><td>Technical Feasibility Check</td><td>CTO, Tech Lead</td><td>CTO</td><td>Dev Team, PM</td><td>All stakeholders</td></tr>
+<tr><td>Risk & Resource Planning</td><td>PM</td><td>PM</td><td>CTO, COO, Dev Lead, Managers</td><td>Finance, All stakeholders</td></tr>
+<tr><td>Sign-off & Approval</td><td>PM</td><td>CEO/COO</td><td>Client, AM, All stakeholders</td><td>Management</td></tr>
+</table>
+
+<p><strong>Role Definitions</strong>:</p>
+<li style="margin-left:0px"><strong>Responsible</strong>: Does the work</li>
+<li style="margin-left:0px"><strong>Accountable</strong>: Approves/owns the outcome</li>
+<li style="margin-left:0px"><strong>Consulted</strong>: Provides input before decision</li>
+<li style="margin-left:0px"><strong>Informed</strong>: Notified after decision</li>
+
+<hr>
+
+<h3>5. Materials/Resources Needed</h3>
+
+<table>
+<tr><th>Material</th><th>Source</th><th>Format</th><th>Used In Step</th></tr>
+<tr><td>Signed Contract</td><td>Legal/AM</td><td>TMPL-CONTRACT-001</td><td>Step 1, Step 2</td></tr>
+<tr><td>Project Charter</td><td>Pre-sales</td><td>TMPL-CHARTER-001</td><td>Step 1, Step 2</td></tr>
+<tr><td>Project Handoff Document</td><td>Pre-sales</td><td>Document</td><td>Step 1, Step 2</td></tr>
+<tr><td>Kick-off Meeting Agenda Template</td><td>Templates</td><td>TMPL-AGENDA-001</td><td>Step 1</td></tr>
+<tr><td>Pre-Meeting Preparation Checklist</td><td>Tier 4</td><td>FORM-PM-004-001</td><td>Step 1</td></tr>
+<tr><td>Meeting Facilitation Checklist</td><td>Tier 4</td><td>FORM-PM-004-002</td><td>Step 1</td></tr>
+<tr><td>Post-Meeting Follow-up Checklist</td><td>Tier 4</td><td>FORM-PM-004-003</td><td>Step 1</td></tr>
+<tr><td>Requirements Document Template</td><td>Templates</td><td>TMPL-REQ-001</td><td>Step 2</td></tr>
+<tr><td>Stakeholder Interview Form</td><td>Tier 4</td><td>FORM-PM-005-001</td><td>Step 2</td></tr>
+<tr><td>Requirements Prioritization Form</td><td>Tier 4</td><td>FORM-PM-005-002</td><td>Step 2</td></tr>
+<tr><td>User Story Creation Form</td><td>Tier 4</td><td>FORM-PM-005-003</td><td>Step 2, Step 3</td></tr>
+<tr><td>Requirements Gathering Checklist</td><td>Tier 4</td><td>CHECK-REQ-001</td><td>Step 2</td></tr>
+<tr><td>User Story Template</td><td>Templates</td><td>TMPL-STORY-001</td><td>Step 3</td></tr>
+<tr><td>SRS Template</td><td>Templates</td><td>TMPL-SRS-001</td><td>Step 3</td></tr>
+<tr><td>User Story Quality Checklist</td><td>Tier 4</td><td>CHECK-REQ-002</td><td>Step 3</td></tr>
+<tr><td>SRS Completeness Checklist</td><td>Tier 4</td><td>CHECK-REQ-003</td><td>Step 3</td></tr>
+<tr><td>Technical Feasibility Checklist</td><td>Tier 4</td><td>CHECK-REQ-004</td><td>Step 4</td></tr>
+<tr><td>Risk Register Template</td><td>Templates</td><td>TMPL-RISK-001</td><td>Step 5</td></tr>
+<tr><td>Risk Identification Worksheet</td><td>Tier 4</td><td>FORM-PM-006-001</td><td>Step 5</td></tr>
+<tr><td>Risk Scoring Form</td><td>Tier 4</td><td>FORM-PM-006-002</td><td>Step 5</td></tr>
+<tr><td>Risk Mitigation Planning Form</td><td>Tier 4</td><td>FORM-PM-006-003</td><td>Step 5</td></tr>
+<tr><td>Budget Template</td><td>Templates</td><td>TMPL-BUDGET-001</td><td>Step 5</td></tr>
+<tr><td>Resource Plan Template</td><td>Templates</td><td>TMPL-RESOURCE-001</td><td>Step 5</td></tr>
+<tr><td>Effort Estimation Worksheet</td><td>Tier 4</td><td>FORM-PM-007-001</td><td>Step 5</td></tr>
+<tr><td>Resource Allocation Form</td><td>Tier 4</td><td>FORM-PM-007-002</td><td>Step 5</td></tr>
+<tr><td>Budget Calculation Template</td><td>Tier 4</td><td>FORM-PM-007-003</td><td>Step 5</td></tr>
+<tr><td>Requirements Sign-off Form</td><td>Tier 4</td><td>FORM-PM-008-001</td><td>Step 6</td></tr>
+<tr><td>Requirements Review Preparation Checklist</td><td>Tier 4</td><td>CHECK-REQ-005</td><td>Step 6</td></tr>
+<tr><td>Planning Package Checklist</td><td>Tier 4</td><td>FORM-PM-009-001</td><td>Step 6</td></tr>
+<tr><td>Leadership Presentation Checklist</td><td>Tier 4</td><td>FORM-PM-009-002</td><td>Step 6</td></tr>
+<tr><td>Approval Documentation Form</td><td>Tier 4</td><td>FORM-PM-009-003</td><td>Step 6</td></tr>
+</table>
+
+<hr>
+
+<h3>6. Procedure</h3>
+
+<h4>Step 1: Kickoff Meeting</h4>
+
+<p>Coordinate with client and internal team to schedule and execute the formal project kick-off meeting.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: Project Manager</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-001</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<li style="margin-left:16px">Review handoff documentation and contract for key dates/constraints</li>
+<li style="margin-left:16px">Identify all required attendees (client stakeholders, internal team leads)</li>
+<li style="margin-left:16px">Send meeting invite with agenda (TMPL-AGENDA-001) attached — minimum 3 business days notice</li>
+<li style="margin-left:16px">Conduct kick-off meeting:</li>
+<li style="margin-left:32px">Introductions and project overview</li>
+<li style="margin-left:32px">Review project objectives and success criteria</li>
+<li style="margin-left:32px">Confirm timeline expectations and key milestones</li>
+<li style="margin-left:32px">Establish communication channels and meeting cadence</li>
+<li style="margin-left:32px">Define escalation paths for issues</li>
+<li style="margin-left:32px">Begin initial requirements discussion</li>
+<li style="margin-left:16px">Document all decisions and action items</li>
+<li style="margin-left:16px">Distribute meeting notes within 24 hours; track action items to completion</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: Project Handoff Document, Signed Contract (TMPL-CONTRACT-001), Project Charter (TMPL-CHARTER-001)</li>
+<li style="margin-left:0px"><strong>Output</strong>: Meeting notes with decisions, action items, communication plan, and initial requirements</li>
+
+<p><strong>Tip</strong>: Record the meeting (with client permission) for team members who couldn't attend.</p>
+
+<hr>
+
+<h4>Step 2: Requirements Gathering</h4>
+
+<p>Elicit, document, categorize, and prioritize all project requirements, and define SMART project objectives with success criteria.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: Project Manager, Business Analyst</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-002</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<li style="margin-left:16px">Plan requirements gathering activities (interviews, workshops, surveys, observation, document analysis)</li>
+<li style="margin-left:16px">Conduct stakeholder interviews using FORM-PM-005-001</li>
+<li style="margin-left:16px">Facilitate requirements workshops with cross-functional teams</li>
+<li style="margin-left:16px">Review existing client documentation and systems</li>
+<li style="margin-left:16px">Document functional requirements (what the system must do)</li>
+<li style="margin-left:16px">Document non-functional requirements with measurable targets (performance, security, scalability, usability, compliance)</li>
+<li style="margin-left:16px">Categorize and prioritize requirements using MoSCoW framework (Must Haves ≤ 60% of effort)</li>
+<li style="margin-left:16px">Define SMART project objectives aligned with business case:</li>
+<li style="margin-left:32px">Establish KPIs, baselines, and targets for each objective</li>
+<li style="margin-left:32px">Cross-reference objectives to requirements (every Must Have should trace to an objective)</li>
+<li style="margin-left:16px">Validate completeness: internal review with Tech Lead, Designer, QA Lead</li>
+<li style="margin-left:16px">Verify with CHECK-REQ-001 (Requirements Gathering Checklist)</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: Meeting notes, client documentation, stakeholder access, Project Charter, Business Case</li>
+<li style="margin-left:0px"><strong>Output</strong>: Requirements Document, Prioritized Requirements List, Project Objectives Document</li>
+
+<p><strong>Go/No-Go — proceed to Step 3 when:</strong></p>
+<li style="margin-left:0px">☐ All requirement areas covered, no ambiguous items, client confirms completeness</li>
+<li style="margin-left:0px">☐ All objectives pass SMART validation with measurable success criteria</li>
+<li style="margin-left:0px">☐ Must Have requirements ≤ 60% of total effort</li>
+<li style="margin-left:0px">☐ Internal team reviewed for feasibility; TBD items < 10% with resolution plan</li>
+
+<hr>
+
+<h4>Step 3: User Stories & SRS</h4>
+
+<p>Transform requirements into user stories with acceptance criteria and compile the System Requirements Specification.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: Project Manager, Business Analyst</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-003</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<p><strong>Part A — User Stories:</strong></p>
+<li style="margin-left:16px">Define user personas and roles</li>
+<li style="margin-left:16px">Transform requirements into user stories (As a… I want… So that…)</li>
+<li style="margin-left:16px">Define acceptance criteria for each story (Given/When/Then)</li>
+<li style="margin-left:16px">Estimate story points (optional at this stage)</li>
+<li style="margin-left:16px">Group stories into epics/features</li>
+<li style="margin-left:16px">Create prioritized product backlog</li>
+
+<p><strong>Part B — SRS:</strong></p>
+<li style="margin-left:16px">Define system overview and context</li>
+<li style="margin-left:16px">Document functional requirements with use cases</li>
+<li style="margin-left:16px">Define non-functional requirements with metrics</li>
+<li style="margin-left:16px">Document interfaces (user, hardware, software, communication)</li>
+<li style="margin-left:16px">Define data requirements</li>
+<li style="margin-left:16px">Identify system integration points</li>
+<li style="margin-left:16px">Build requirements traceability matrix</li>
+<li style="margin-left:16px">Compile and peer-review SRS</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: Requirements Document, Project Objectives, Non-functional Requirements</li>
+<li style="margin-left:0px"><strong>Output</strong>: User Stories, Product Backlog, SRS Document, Traceability Matrix</li>
+
+<p><strong>Go/No-Go — proceed to Step 4 when:</strong></p>
+<li style="margin-left:0px">☐ All requirements covered by stories; SRS complete</li>
+<li style="margin-left:0px">☐ Traceability has no gaps</li>
+<li style="margin-left:0px">☐ Peer review passed; CHECK-REQ-002 and CHECK-REQ-003 verified</li>
+
+<hr>
+
+<h4>Step 4: Technical Feasibility</h4>
+
+<p>Assess whether all requirements are technically achievable within the project's constraints.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: CTO, Tech Lead</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-004</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<li style="margin-left:16px">Review SRS with technical team</li>
+<li style="margin-left:16px">Assess technical complexity across all dimensions</li>
+<li style="margin-left:16px">Identify technology constraints and knowledge gaps</li>
+<li style="margin-left:16px">Evaluate integration requirements for each external system</li>
+<li style="margin-left:16px">Assess resource and timeline feasibility</li>
+<li style="margin-left:16px">Identify technical risks with mitigation plans</li>
+<li style="margin-left:16px">Document feasibility findings and verdict</li>
+<li style="margin-left:16px">Verify with CHECK-REQ-004 (Technical Feasibility Checklist)</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: SRS Document, User Stories, Team Skills Inventory, Technology Constraints</li>
+<li style="margin-left:0px"><strong>Output</strong>: Feasibility Assessment Report, Technical Risk Register</li>
+
+<p><strong>Go/No-Go — proceed to Step 5 when:</strong></p>
+<li style="margin-left:0px">☐ All requirements assessed as feasible or conditionally feasible with agreed mitigations</li>
+<li style="margin-left:0px">☐ Infeasible items revised with client agreement before proceeding</li>
+
+<hr>
+
+<h4>Step 5: Risk & Resource Planning</h4>
+
+<p>Identify and mitigate project risks, estimate effort, allocate resources, build the timeline, and calculate the budget.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: Project Manager</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-005</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<li style="margin-left:16px">Conduct risk identification workshop across all categories (technical, resource, schedule, budget, client, external)</li>
+<li style="margin-left:16px">Score each risk (probability × impact); prioritize by score</li>
+<li style="margin-left:16px">Develop mitigation strategies for risks scoring ≥ 4; assign risk owners</li>
+<li style="margin-left:16px">Compile Risk Register (TMPL-RISK-001)</li>
+<li style="margin-left:16px">Estimate effort per phase and epic; get Tech Lead sign-off on technical estimates</li>
+<li style="margin-left:16px">Identify required roles and confirm resource availability with managers</li>
+<li style="margin-left:16px">Build project timeline with milestones, dependencies, and critical path</li>
+<li style="margin-left:16px">Calculate budget (labor + non-labor + contingency based on risk profile)</li>
+<li style="margin-left:16px">Compare budget to contract; reconcile or escalate gaps</li>
+<li style="margin-left:16px">Compile executive summary of all risk and resource planning deliverables</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: Requirements Document, SRS, Feasibility Assessment, Project Objectives, Contract, Resource Availability, Historical Data</li>
+<li style="margin-left:0px"><strong>Output</strong>: Risk Register, Budget Estimate, Resource Plan, Project Timeline, Budget Reconciliation, Executive Summary</li>
+
+<p><strong>Go/No-Go — proceed to Step 6 when:</strong></p>
+<li style="margin-left:0px">☐ Risk Register complete with mitigations for all scores ≥ 4</li>
+<li style="margin-left:0px">☐ Budget is within contract or over-budget escalation is resolved</li>
+<li style="margin-left:0px">☐ Resource availability confirmed (not assumed)</li>
+<li style="margin-left:0px">☐ Timeline fits contract dates or gap is flagged and addressed</li>
+
+<hr>
+
+<h4>Step 6: Sign-off & Approval</h4>
+
+<p>Secure formal client sign-off on the requirements baseline and internal leadership approval to proceed to Design.</p>
+
+<li style="margin-left:0px"><strong>Responsible</strong>: Project Manager</li>
+<li style="margin-left:0px"><strong>Work Instruction</strong>: WI-PMR-006</li>
+<li style="margin-left:0px"><strong>Action</strong>:</li>
+<p><strong>Client Sign-off:</strong></p>
+<li style="margin-left:16px">Compile requirements package (SRS, user stories, objectives, timeline, assumptions, out-of-scope items)</li>
+<li style="margin-left:16px">Distribute review package ≥ 3 business days before review meeting</li>
+<li style="margin-left:16px">Conduct formal review meeting — walk through requirements, feasibility findings, user stories</li>
+<li style="margin-left:16px">Obtain formal client signature on FORM-PM-008-001 (verbal approval is NOT sufficient)</li>
+<li style="margin-left:16px">Distribute and archive signed requirements baseline</li>
+
+<p><strong>Internal Approval:</strong></p>
+<li style="margin-left:16px">Compile Planning Package; verify with FORM-PM-009-001 checklist</li>
+<li style="margin-left:16px">Prepare and deliver leadership presentation (send summary ≥ 1 day in advance)</li>
+<li style="margin-left:16px">Obtain leadership decision and signature on FORM-PM-009-003</li>
+<li style="margin-left:16px">Communicate approval to all stakeholders; schedule Design phase kick-off within 3–5 business days</li>
+<li style="margin-left:16px">Close Planning & Requirements phase: archive documents, baseline requirements, update project status, record lessons learned</li>
+<li style="margin-left:0px"><strong>Inputs</strong>: All planning and requirements documents, FORM-PM-008-001, FORM-PM-009-001, CHECK-REQ-005</li>
+<li style="margin-left:0px"><strong>Output</strong>: Signed Requirements Sign-off, Planning Approval, Requirements Baseline, Design Phase Kick-off scheduled</li>
+
+<p><strong>⚠️ Warning</strong>: Do not proceed to Design phase without both formal client sign-off AND internal leadership approval. Verbal approval is not sufficient for either.</p>
+
+<hr>
+
+<h3>7. Quality Standards</h3>
+
+<table>
+<tr><th>Deliverable</th><th>Acceptance Criteria</th><th>Verification Method</th><th>Owner</th></tr>
+<tr><td>Meeting Notes</td><td>All decisions and action items captured, distributed within 24 hours</td><td>Peer review</td><td>PM</td></tr>
+<tr><td>Requirements Document</td><td>All sections complete, no TBD items, client reviewed</td><td>Checklist review (CHECK-REQ-001)</td><td>PM</td></tr>
+<tr><td>User Stories</td><td>Each has acceptance criteria, follows INVEST format</td><td>BA review (CHECK-REQ-002)</td><td>PM/BA</td></tr>
+<tr><td>SRS Document</td><td>Complete, follows template, traceability included</td><td>Technical review (CHECK-REQ-003)</td><td>PM</td></tr>
+<tr><td>Project Objectives</td><td>SMART criteria met, aligned with business case</td><td>Leadership review</td><td>PM</td></tr>
+<tr><td>Feasibility Assessment</td><td>All requirements assessed, risks documented</td><td>CTO review (CHECK-REQ-004)</td><td>CTO</td></tr>
+<tr><td>Risk Register</td><td>All major risks identified, mitigation strategies for scores ≥ 4</td><td>Team review</td><td>PM</td></tr>
+<tr><td>Budget Estimate</td><td>Within contract or escalated, justified by risk profile</td><td>Finance review</td><td>PM</td></tr>
+<tr><td>Resource Plan</td><td>Roles identified, availability confirmed</td><td>Manager review</td><td>PM</td></tr>
+<tr><td>Signed Requirements</td><td>Client signature obtained, dated, archived</td><td>Document check</td><td>PM</td></tr>
+<tr><td>Planning Approval</td><td>Leadership sign-off obtained</td><td>Document check</td><td>PM</td></tr>
+</table>
+
+<hr>
+
+<h3>8. References</h3>
+
+<p><strong>Related SOPs</strong>:</p>
+
+<table>
+<tr><th>Document ID</th><th>Title</th><th>Relationship</th></tr>
+<tr><td>SOP-PM-002</td><td>Project Handoff</td><td>Upstream (prerequisite)</td></tr>
+<tr><td>SOP-DES-001</td><td>Design Phase</td><td>Downstream (next phase)</td></tr>
+</table>
+
+<p><strong>Work Instructions</strong>:</p>
+
+<table>
+<tr><th>Document ID</th><th>Title</th><th>SOP Step</th></tr>
+<tr><td>WI-PMR-001</td><td>Conducting Kickoff Meeting</td><td>Step 1</td></tr>
+<tr><td>WI-PMR-002</td><td>Requirements Gathering</td><td>Step 2</td></tr>
+<tr><td>WI-PMR-003</td><td>User Stories & SRS</td><td>Step 3</td></tr>
+<tr><td>WI-PMR-004</td><td>Technical Feasibility</td><td>Step 4</td></tr>
+<tr><td>WI-PMR-005</td><td>Risk & Resource Planning</td><td>Step 5</td></tr>
+<tr><td>WI-PMR-006</td><td>Sign-off & Approval</td><td>Step 6</td></tr>
+</table>
+
+<p><strong>Templates</strong>:</p>
+
+<table>
+<tr><th>Document ID</th><th>Title</th><th>Purpose</th></tr>
+<tr><td>TMPL-CONTRACT-001</td><td>Signed Contract Template</td><td>Standard contract structure</td></tr>
+<tr><td>TMPL-CHARTER-001</td><td>Project Charter Template</td><td>Project charter for kickoff</td></tr>
+<tr><td>TMPL-AGENDA-001</td><td>Kick-off Meeting Agenda</td><td>Standard agenda for client kick-off</td></tr>
+<tr><td>TMPL-REQ-001</td><td>Requirements Document</td><td>Structured requirements capture</td></tr>
+<tr><td>TMPL-STORY-001</td><td>User Story Template</td><td>Consistent story format</td></tr>
+<tr><td>TMPL-SRS-001</td><td>SRS Template</td><td>System requirements specification</td></tr>
+<tr><td>TMPL-RISK-001</td><td>Risk Register</td><td>Risk tracking and mitigation</td></tr>
+<tr><td>TMPL-BUDGET-001</td><td>Budget Template</td><td>Project budget estimation</td></tr>
+<tr><td>TMPL-RESOURCE-001</td><td>Resource Plan</td><td>Resource allocation planning</td></tr>
+</table>
+
+<p><strong>Forms & Checklists (Tier 4)</strong>:</p>
+
+<table>
+<tr><th>Document ID</th><th>Title</th><th>Purpose</th></tr>
+<tr><td>FORM-PM-004-001</td><td>Pre-Meeting Preparation Checklist</td><td>Kick-off meeting prep verification</td></tr>
+<tr><td>FORM-PM-004-002</td><td>Meeting Facilitation Checklist</td><td>In-meeting execution checklist</td></tr>
+<tr><td>FORM-PM-004-003</td><td>Post-Meeting Follow-up Checklist</td><td>Post-meeting action tracking</td></tr>
+<tr><td>FORM-PM-005-001</td><td>Stakeholder Interview Form</td><td>Structured interview capture</td></tr>
+<tr><td>FORM-PM-005-002</td><td>Requirements Prioritization Form</td><td>MoSCoW prioritization</td></tr>
+<tr><td>FORM-PM-005-003</td><td>User Story Creation Form</td><td>INVEST story creation</td></tr>
+<tr><td>CHECK-REQ-001</td><td>Requirements Gathering Checklist</td><td>Gathering completeness</td></tr>
+<tr><td>CHECK-REQ-002</td><td>User Story Quality Checklist</td><td>Story quality verification</td></tr>
+<tr><td>CHECK-REQ-003</td><td>SRS Completeness Checklist</td><td>SRS completeness verification</td></tr>
+<tr><td>CHECK-REQ-004</td><td>Technical Feasibility Checklist</td><td>Technical assessment</td></tr>
+<tr><td>CHECK-REQ-005</td><td>Requirements Review Preparation Checklist</td><td>Review readiness</td></tr>
+<tr><td>FORM-PM-006-001</td><td>Risk Identification Worksheet</td><td>Risk discovery</td></tr>
+<tr><td>FORM-PM-006-002</td><td>Risk Scoring Form</td><td>Probability × Impact assessment</td></tr>
+<tr><td>FORM-PM-006-003</td><td>Risk Mitigation Planning Form</td><td>Mitigation strategy capture</td></tr>
+<tr><td>FORM-PM-007-001</td><td>Effort Estimation Worksheet</td><td>Story point / time estimation</td></tr>
+<tr><td>FORM-PM-007-002</td><td>Resource Allocation Form</td><td>Team assignment tracking</td></tr>
+<tr><td>FORM-PM-007-003</td><td>Budget Calculation Template</td><td>Cost estimation with contingency</td></tr>
+<tr><td>FORM-PM-008-001</td><td>Requirements Sign-off Form</td><td>Formal requirements baseline approval</td></tr>
+<tr><td>FORM-PM-009-001</td><td>Planning Package Checklist</td><td>Pre-approval package verification</td></tr>
+<tr><td>FORM-PM-009-002</td><td>Leadership Presentation Checklist</td><td>Approval meeting preparation</td></tr>
+<tr><td>FORM-PM-009-003</td><td>Approval Documentation Form</td><td>Formal planning phase approval</td></tr>
+</table>
+
+<p><strong>External References</strong>:</p>
+<li style="margin-left:0px">ISO 9001:2015 Clause 8.2 — Requirements for products and services</li>
+<li style="margin-left:0px">IEEE 830 — Software Requirements Specifications</li>
+<li style="margin-left:0px">PMBOK Guide — Project Planning, Scope Management, Risk Management</li>
+<li style="margin-left:0px">ISO 31000 — Risk Management principles</li>
+
+<hr>
+
+<h3>9. Revision History</h3>
+
+<table>
+<tr><th>Version</th><th>Date</th><th>Author</th><th>Changes</th></tr>
+<tr><td>1.0.0</td><td>2026-03-02</td><td>Process Merge</td><td>Created by merging SOP-PM-003-v3.0.0 (Project Planning) and SOP-PM-008-v3.0.0 (Requirements Management) into a single unified stage. 6 steps: Kickoff → Requirements Gathering → User Stories & SRS → Technical Feasibility → Risk & Resource Planning → Sign-off & Approval. Eliminated overlap between planning and requirements phases. Added TMPL-CONTRACT-001 and TMPL-CHARTER-001 as prerequisites.</td></tr>
+</table>
+
+<hr>
+
+<p><em>Document ID: SOP-PMR-001-v1.0.0 | Updated: 2026-03-02</em></p>
+</body></html>
