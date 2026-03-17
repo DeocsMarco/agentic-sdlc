@@ -4,28 +4,77 @@ A comprehensive, ISO 9001:2015-aligned process framework for agentic software de
 
 ## 🗺️ Lifecycle Overview
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        AGENTIC SDLC                                 │
-│                                                                     │
-│  ┌──────────┐   ┌──────────────┐   ┌──────────┐   ┌────────────┐  │
-│  │   0.     │   │     1.       │   │   3.     │   │    4.      │  │
-│  │Pre-Sales │──▶│  Planning &  │──▶│ Design   │──▶│Development │  │
-│  │          │   │ Requirements │   │          │   │            │  │
-│  └──────────┘   └──────────────┘   └──────────┘   └─────┬──────┘  │
-│                                                          │         │
-│                                                          ▼         │
-│                 ┌──────────┐                      ┌──────────┐     │
-│                 │   6.     │◀─────────────────────│   5.     │     │
-│                 │Deploy &  │                      │ Testing  │     │
-│                 │ Release  │                      │  & QA    │     │
-│                 └──────────┘                      └──────────┘     │
-│                      │                                  │          │
-│                      │         ┌──────────┐             │          │
-│                      └────────▶│ Rollback │◀────────────┘          │
-│                                │ (if needed)                       │
-│                                └──────────┘                        │
-└─────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph S0["<b>0 — Pre-Sales</b>"]
+        A1[📋 Receive RFP] --> A2[🔍 Feasibility Assessment]
+        A2 --> A3{Go / No-Go?}
+        A3 -->|No-Go| A_END([Project Declined])
+        A3 -->|Go| A4[📝 Strategy & Proposal]
+        A4 --> A5[✍️ Contract Signing]
+        A5 --> A6[🤝 Project Handoff]
+    end
+
+    subgraph S1["<b>1 — Planning & Requirements</b>"]
+        B1[🚀 Kickoff Meeting] --> B2[📊 Requirements Gathering]
+        B2 --> B3[📖 User Stories & SRS]
+        B3 --> B4[⚙️ Technical Feasibility]
+        B4 --> B5[⚠️ Risk & Resource Planning]
+        B5 --> B6{Requirements Approved?}
+        B6 -->|Rework| B2
+        B6 -->|Approved| B7[✅ Planning Signoff]
+    end
+
+    subgraph S3["<b>3 — Design</b>"]
+        C1[🏗️ Architecture Design] --> C2[🗄️ Database & API Design]
+        C2 --> C3[🎨 UI/UX Design]
+        C3 --> C4[📐 Low-Level Design]
+        C4 --> C5{Design Review}
+        C5 -->|Issues Found| C1
+        C5 -->|Approved| C6[✅ Design Signoff]
+    end
+
+    subgraph S4["<b>4 — Development</b>"]
+        D1[🔧 Env & Repo Setup] --> D2[💻 Code Development]
+        D2 --> D3[📝 Code Documentation]
+        D3 --> D4[🧪 Unit Testing]
+        D4 --> D5{Code Review}
+        D5 -->|Changes Needed| D2
+        D5 -->|Approved| D6[✅ Dev Complete]
+    end
+
+    subgraph S5["<b>5 — Testing & QA</b>"]
+        E1[🔬 System & Manual Testing] --> E2[🔗 Integration Testing]
+        E2 --> E3[⚡ Performance Testing]
+        E3 --> E4{Bugs Found?}
+        E4 -->|Yes| E5[🐛 Bug Resolution] --> E1
+        E4 -->|No| E6[👤 User Acceptance Testing]
+        E6 --> E7{UAT Passed?}
+        E7 -->|Failed| E5
+        E7 -->|Passed| E8[✅ Testing Signoff]
+    end
+
+    subgraph S6["<b>6 — Deployment & Release</b>"]
+        F1[📦 Deployment Preparation] --> F2[🚀 Deploy to Production]
+        F2 --> F3[✔️ Post-Deploy Verification]
+        F3 --> F4{Deployment OK?}
+        F4 -->|Failed| F5[⏪ Rollback] --> F1
+        F4 -->|Success| F6[📚 User Training & Handoff]
+        F6 --> F7([🎉 Project Complete])
+    end
+
+    A6 --> B1
+    B7 --> C1
+    C6 --> D1
+    D6 --> E1
+    E8 --> F1
+
+    style S0 fill:#f0f7f0,stroke:#6B8E6B,stroke-width:2px
+    style S1 fill:#f0f4f8,stroke:#4A7AB5,stroke-width:2px
+    style S3 fill:#fdf5f0,stroke:#C4834C,stroke-width:2px
+    style S4 fill:#f5f0f7,stroke:#7B5EA7,stroke-width:2px
+    style S5 fill:#f7f0f0,stroke:#B54A4A,stroke-width:2px
+    style S6 fill:#f0f7f5,stroke:#4A8B6E,stroke-width:2px
 ```
 
 ## 📐 Document Hierarchy (ISO 9001:2015)
